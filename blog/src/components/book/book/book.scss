@@ -1,0 +1,8 @@
+@import '../../../assets/indexCommon.scss';
+.book{
+    width: 100%;
+    @include e("btn"){
+        font-size: C(30);
+        height: C(40);
+    }
+}

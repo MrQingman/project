@@ -1,0 +1,10 @@
+@mixin e($selector){
+    &__#{$selector} {
+        @content;
+    }
+}
+@mixin m($selector){
+    &__#{$selector} {
+        @content;
+    }
+}

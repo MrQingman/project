@@ -1,0 +1,11 @@
+1，CommonsChunkPlugin 抽取的是公共部分而不是"经常变动的部分";
+2,观察了一下，webpack应该是会在最后一个CommonsChunkPlugin产出的chunk注入webpackJsonp的定义,以及异步加载相关的定义,而就是这个会涉及到所有entry及chunk的md5,所以会"经常变动"，同时vue-cli默认的vendor是打包node_module下的所有依赖，会很大，在生产环境，过大的文件要尽量利用缓存来加快载入速度，但“经常变动”不利于缓存，所以为了将entry(这里可认为是app.js)的变动隔离在vendor之外，vue-cli在vendor之后多做了一个manifest的chunk,这样entry只要不引入新的node_modules里的包就不会影响到vendor了.ps:所以其实跟编译次数没什么关系,所有文件每次打包都会再编译一次的,重点是大文件，缓存，变动代码的拆分.
+
+以下说明仅依照vue-cli全家桶默认配置解读，如有错误，请指出：
+app.js：基本就是你实际编写的那个app.vue(.vue或.js?),没这个页面跑不起来.
+vendor.js:vue-cli全家桶默认配置里面这个chunk就是将所有从node_modules/里require(import)的依赖都打包到这里，所以这个就是所有node_modules/下的被require(import)的js文件
+manifest.js: 最后一个chunk，被注入了webpackJsonp的定义及异步加载相关的定义(webpack调用CommonsChunkPlugin处理后模块管理的核心,因为是核心,所以要第一个进行加载,不然会报错).
+
+精简:由于默认的vendor的打包策略导致这个chunk很大,按照默认配置这基本没什么好精简了,要精简的话基本要针对项目实际来修改各个chunk的打包策略(尽量减少包的大小来提速首屏加载)
+
+优化:单页面基本就跟精简同个道理吧,多页面的话感觉还是自定义一下vendor的打包策略,毕竟不一定所有页面都会用到全量的第三方依赖，适当减少vendor的体积能提高不少加载速度.

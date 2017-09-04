@@ -1,0 +1,4 @@
+$uIwidth:750;
+@function C($px){
+    @return ($px/($uIwidth/10)*1rem);
+}
