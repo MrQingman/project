@@ -1,0 +1,18 @@
+@import '../../assets/indexCommon.scss';
+.book-header{
+    width: 100%;
+    padding: C(25) C(40);
+    background: $light-blue;
+    @include e("box"){
+        width: C(500);
+        height: C(60);
+        background: #fff;
+        border-radius: C(20);
+        position: relative;  
+        >input{
+            position: absolute;
+            left: C(40);
+            top:C(15);
+        }
+    }
+}

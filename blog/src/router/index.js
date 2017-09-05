@@ -1,14 +1,16 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Book from '@/components/book/book/book'
+import Book from '@/components/book/book'
+import BookAarray from './bookName'
 Vue.use(Router)
-
 export default new Router({
+  linkActiveClass:'modified',
   routes: [
     {
       path: '/',
       name: 'book',
-      component: Book
+      component: Book,
+      children:BookAarray
     }
   ]
 })

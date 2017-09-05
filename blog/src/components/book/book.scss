@@ -1,0 +1,31 @@
+@import '../../assets/indexCommon.scss';
+.book{
+    width: 100%;
+    @include e("btn"){
+        font-size: C(30);
+        overflow: hidden;
+    }
+    @include e("block"){
+        width: 50%;
+        height: C(95);
+        text-align: center;
+        border-bottom: C(5) solid $dark-blue;
+        float: left;
+        display: flex;
+        justify-content: center;
+    }
+    @include e("title"){
+        font-size: C(26);
+        padding: C(15) C(25);
+        margin: C(15) 0;
+        color: $dark-blue;
+        border-radius: C(15);
+    }
+    @include m("modified"){
+            border-color: #7ebf81;
+        .modified{
+            color: #fff;
+            background: #7ebf81;
+        }
+    }
+}

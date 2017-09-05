@@ -21,6 +21,7 @@ time, mark, audio, video {
 	border: 0;
 	font: inherit;
 	vertical-align: baseline;
+	list-style: none;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -48,4 +49,8 @@ table {
 a{
 	text-decoration:none;
 	color: black;
+}
+input{
+	border: 0;
+	outline: none;
 }
