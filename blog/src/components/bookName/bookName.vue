@@ -1,6 +1,35 @@
 <template>
-    <div class="book-name">
-        {{ $route.params.id }}
+    <div>
+        <div class="book-name">
+            <div v-for="item in books" class="book-name__block">
+                <div class="book-name__img">
+                    <img :src="item.img" alt="">
+                </div>
+                <p class="book-name__titile">{{item.title}}</p>
+                <p class="book-name__notice">{{item.notice}}</p>
+            </div>
+
+        </div>
+        <div class="book-name">
+            <div v-for="item in books" class="book-name__block">
+                <div class="book-name__img">
+                    <img :src="item.img" alt="">
+                </div>
+                <p class="book-name__titile">{{item.title}}</p>
+                <p class="book-name__notice">{{item.notice}}</p>
+            </div>
+
+        </div>
+        <div class="book-name">
+            <div v-for="item in books" class="book-name__block">
+                <div class="book-name__img">
+                    <img :src="item.img" alt="">
+                </div>
+                <p class="book-name__titile">{{item.title}}</p>
+                <p class="book-name__notice">{{item.notice}}</p>
+            </div>
+
+        </div>
     </div>
 </template>
 
@@ -9,25 +38,26 @@ export default {
     name: 'bookName',
     data() {
         return {
-            ms:'data'
+            books: ''
         }
     },
-    methods:{
+    methods: {
         get_books() {
-             this.axios.get(`http://localhost:3000/books/${this.$route.params.id}`)
-             .then(function(res) {
-                console.log(res.data);
-            }).catch(function(err) {
-                console.log(err);
-            })
+            const _this = this;
+            this.axios.get(`http://192.168.251.37:3000/books/${this.$route.params.id}`)
+                .then(function(res) {
+                    _this.books = res.data.data;
+                }).catch(function(err) {
+                    console.log(err);
+                })
         }
     },
-    beforeMount(){
+    beforeMount() {
         this.get_books();
     },
-    watch:{
-        '$route' (to,from){
-            if(to.params.id!=from.params.id){
+    watch: {
+        '$route'(to, from) {
+            if (to.params.id != from.params.id) {
                 this.get_books();
             }
         }
@@ -39,5 +69,29 @@ export default {
 @import '../../assets/indexCommon.scss';
 .book-name {
     font-size: C(32);
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+    @include e("block") {
+        margin-top: C(40);
+    }
+    @include e("img") {
+        width: C(200);
+        height: C(250);
+        overflow: hidden;
+        >img {
+            width: C(214);
+        }
+    }
+    @include e("titile") {
+        font-size: C(26);
+        color: #444;
+        padding-top: C(10);
+    }
+    @include e("notice") {
+        padding-top: C(10);
+        font-size: C(24);
+        color: #666;
+    }
 }
 </style>

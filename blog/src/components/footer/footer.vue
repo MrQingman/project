@@ -1,8 +1,8 @@
 <template>
 <div class="footer">
-    <router-link to="/" tag="li"  class="footer__select">菜单一</router-link>
-    <router-link to="/a?ref=cc" tag="li" class="footer__select">菜单二</router-link>
-    <router-link to="/c" tag="li" class="footer__select">菜单三</router-link>
+    <router-link to="/" tag="li"  class="footer__select iconfont">&#xe60e;</router-link>
+    <router-link to="/a?ref=cc" tag="li" class="footer__select iconfont">&#xe639;</router-link>
+    <router-link to="/c" tag="li" class="footer__select iconfont">&#xe611;</router-link>
 </div>  
 </template>
 
@@ -19,7 +19,7 @@ export default{
     height: C(80);
     line-height: C(80);
     display: flex;
-    padding: 0 C(30);
+    padding: 0 C(60);
     justify-content: space-between;
     background: $light-blue;
     position: fixed;
@@ -28,7 +28,7 @@ export default{
     box-sizing: border-box;
     @include e("select"){
         color: #fff;
-        font-size: C(26);
+        font-size: C(40);
     }
 }
 </style>

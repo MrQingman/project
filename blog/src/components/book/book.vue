@@ -2,11 +2,11 @@
     <div class="book">
         <bookHeader></bookHeader>
         <div class="book__btn">
-            <div class="book__block" @click="hot_change" >
-            <router-link tag="span" class="book__title" to="/bookName/1" append>畅销书单</router-link> 
+            <div class="book__block"  :class="{modified:is_hot==1}">
+                <router-link tag="span" @click.native="hot_change"  class="book__title" to="/bookName/1" append>畅销书单</router-link>
             </div>
-            <div class="book__block" @click="hot_change" >
-            <router-link tag="span" class="book__title" to="/bookName/2" append>本月书单</router-link> 
+            <div class="book__block"  :class="{modified:is_hot==2}">
+                <router-link tag="span" @click.native="new_change"  class="book__title" to="/bookName/2" append>本月书单</router-link>
             </div>
         </div>
         <router-view></router-view>
@@ -15,21 +15,23 @@
 
 <script>
 import bookHeader from '@/components/bookHeader/bookHeader'
-export default{
+export default {
     name: 'book',
-    data(){
+    data: function() {
         return {
-            is_hot:false,
-            is_now:false
+            is_hot: 1
         }
     },
-    components:{
+    components: {
         bookHeader
     },
-    methods:{
-            hot_change(e){
-                
-            }
+    methods: {
+        hot_change(e) {
+            this.is_hot = 1
+        },
+        new_change(){
+            this.is_hot = 2
+        }
     }
 }
 </script>

@@ -1,11 +1,12 @@
 @import '../../assets/indexCommon.scss';
-.book{
+.book {
     width: 100%;
-    @include e("btn"){
+    height: 100%;
+    @include e("btn") {
         font-size: C(30);
         overflow: hidden;
     }
-    @include e("block"){
+    @include e("block") {
         width: 50%;
         height: C(95);
         text-align: center;
@@ -14,18 +15,19 @@
         display: flex;
         justify-content: center;
     }
-    @include e("title"){
+    @include e("title") {
         font-size: C(26);
         padding: C(15) C(25);
         margin: C(15) 0;
         color: $dark-blue;
         border-radius: C(15);
     }
-    @include m("modified"){
-            border-color: #7ebf81;
-        .modified{
-            color: #fff;
-            background: #7ebf81;
-        }
+}
+
+.modified {
+    border-color: #7ebf81;
+    .book__title {
+        color: #fff;
+        background: #7ebf81;
     }
 }

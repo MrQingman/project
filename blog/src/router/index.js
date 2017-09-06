@@ -4,13 +4,14 @@ import Book from '@/components/book/book'
 import BookAarray from './bookName'
 Vue.use(Router)
 export default new Router({
-  linkActiveClass:'modified',
+  linkActiveClass:'active',
   routes: [
     {
       path: '/',
       name: 'book',
       component: Book,
-      children:BookAarray
+      children:BookAarray,
+      redirect: '/bookName/1'
     }
   ]
 })

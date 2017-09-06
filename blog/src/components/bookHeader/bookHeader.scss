@@ -3,6 +3,7 @@
     width: 100%;
     padding: C(25) C(40);
     background: $light-blue;
+    box-sizing: border-box;
     @include e("box"){
         width: C(500);
         height: C(60);
