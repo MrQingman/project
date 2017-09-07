@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div >
         <div class="book-name">
             <div v-for="item in books" class="book-name__block">
                 <div class="book-name__img">
@@ -8,28 +8,13 @@
                 <p class="book-name__titile">{{item.title}}</p>
                 <p class="book-name__notice">{{item.notice}}</p>
             </div>
-
+           
         </div>
-        <div class="book-name">
-            <div v-for="item in books" class="book-name__block">
-                <div class="book-name__img">
-                    <img :src="item.img" alt="">
-                </div>
-                <p class="book-name__titile">{{item.title}}</p>
-                <p class="book-name__notice">{{item.notice}}</p>
-            </div>
-
-        </div>
-        <div class="book-name">
-            <div v-for="item in books" class="book-name__block">
-                <div class="book-name__img">
-                    <img :src="item.img" alt="">
-                </div>
-                <p class="book-name__titile">{{item.title}}</p>
-                <p class="book-name__notice">{{item.notice}}</p>
-            </div>
-
-        </div>
+         <ul class="book-name__btn">
+             <router-link tag="li" to=" " ></router-link>
+             <router-link tag="li" to=" " ></router-link>
+             <router-link tag="li" to=" " ></router-link>    
+         </ul>
     </div>
 </template>
 
@@ -44,23 +29,20 @@ export default {
     methods: {
         get_books() {
             const _this = this;
-            this.axios.get(`http://192.168.251.37:3000/books/${this.$route.params.id}`)
+            this.axios.get(`http://192.168.251.37:3000/${this.$route.params.bookname}/${this.$route.params.id}`)
                 .then(function(res) {
-                    _this.books = res.data.data;
+                    _this.books=res.data.data;
                 }).catch(function(err) {
                     console.log(err);
                 })
         }
+
     },
     beforeMount() {
         this.get_books();
     },
     watch: {
-        '$route'(to, from) {
-            if (to.params.id != from.params.id) {
-                this.get_books();
-            }
-        }
+        '$route':'get_books'
     }
 }
 </script>

@@ -11,7 +11,7 @@ export default new Router({
       name: 'book',
       component: Book,
       children:BookAarray,
-      redirect: '/bookName/1'
+      redirect: '/hot_book/1'
     }
   ]
 })

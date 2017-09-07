@@ -5,6 +5,11 @@ import '@/assets/icon/iconfont.css'
 import App from './App'
 import router from './router'
 import axios from 'axios'
+import AlloyFinger from 'alloyfinger/alloy_finger'
+import AlloyFingerVue from 'alloyfinger/vue/alloy_finger.vue'
+Vue.use(AlloyFingerVue, {
+  AlloyFinger
+})
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

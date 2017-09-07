@@ -1,85 +1,245 @@
 {
-    "books":[
-        {
-            "id":1,
-            "data":[
-                {
-                    "pid":1,
-                    "title":"蜀山战纪",
-                    "img":"./static/img/timg.jpg",
-                    "notice":"台乾清"
+    "hot_book": [{
+            "id": 1,
+            "data": [{
+                    "pid": 1,
+                    "title": "奥特曼",
+                    "notice": "台乾清",
+                    "img": "/static/img/timg.jpg"
                 },
                 {
-                    "pid":2,
-                    "title":"笑傲江湖",
-                    "img":"./static/img/timg.jpg",
-                    "notice":"台乾清"
+                    "pid": 2,
+                    "title": "三国演义",
+                    "notice": "台乾清",
+                    "img": "/static/img/timg.jpg"
                 },
                 {
-                    "pid":3,
-                    "title":"大话西游",
-                    "img":"./static/img/timg.jpg",
-                    "notice":"台乾清"
+                    "pid": 3,
+                    "title": "三国演义",
+                    "notice": "台乾清",
+                    "img": "/static/img/timg.jpg"
                 },
                 {
-                    "pid":4,
-                    "title":"三毛流浪记",
-                    "img":"./static/img/timg.jpg",
-                    "notice":"台乾清"
+                    "pid": 1,
+                    "title": "三国演义",
+                    "notice": "台乾清",
+                    "img": "/static/img/timg.jpg"
                 },
                 {
-                    "pid":5,
-                    "title":"银河之力",
-                    "img":"./static/img/timg.jpg",
-                    "notice":"台乾清"
+                    "pid": 2,
+                    "title": "三国演义",
+                    "notice": "台乾清",
+                    "img": "/static/img/timg.jpg"
                 },
                 {
-                    "pid":7,
-                    "title":"肖申克的就读",
-                    "img":"./static/img/timg.jpg",
-                    "notice":"台乾清"
-                }                
+                    "pid": 3,
+                    "title": "三国演义",
+                    "notice": "台乾清",
+                    "img": "/static/img/timg.jpg"
+                }
             ]
-        },{
-            "id":2,
-            "data":[
-                {
-                    "pid":1,
-                    "title":"凹凸曼",
-                    "img":"./static/img/timg1.jpg",
-                    "notice":"台乾清"
+        },
+        {
+            "id": 2,
+            "data": [{
+                    "pid": 1,
+                    "title": "三国演义",
+                    "notice": "台乾清",
+                    "img": "/static/img/timg1.jpg"
                 },
                 {
-                    "pid":2,
-                    "title":"人与自然",
-                    "img":"./static/img/timg1.jpg",
-                    "notice":"台乾清"
+                    "pid": 2,
+                    "title": "三国演义",
+                    "notice": "台乾清",
+                    "img": "/static/img/timg.jpg"
                 },
                 {
-                    "pid":3,
-                    "title":"三国演义",
-                    "img":"./static/img/timg1.jpg",
-                    "notice":"台乾清"
+                    "pid": 3,
+                    "title": "三国演义",
+                    "notice": "台乾清",
+                    "img": "/static/img/timg.jpg"
                 },
                 {
-                    "pid":4,
-                    "title":"三顾茅庐",
-                    "img":"./static/img/timg1.jpg",
-                    "notice":"台乾清"
+                    "pid": 1,
+                    "title": "三国演义",
+                    "notice": "台乾清",
+                    "img": "/static/img/timg.jpg"
                 },
                 {
-                    "pid":5,
-                    "title":"银河之力",
-                    "img":"./static/img/timg1.jpg",
-                    "notice":"台乾清"
+                    "pid": 2,
+                    "title": "三国演义",
+                    "notice": "台乾清",
+                    "img": "/static/img/timg.jpg"
                 },
                 {
-                    "pid":7,
-                    "title":"叮当猫",
-                    "img":"./static/img/timg1.jpg",
-                    "notice":"台乾清"
-                }                
-            ]   
+                    "pid": 3,
+                    "title": "三国演义",
+                    "notice": "台乾清",
+                    "img": "/static/img/timg.jpg"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "data": [{
+                    "pid": 1,
+                    "title": "三国演义",
+                    "notice": "台乾清",
+                    "img": "/static/img/timg.jpg"
+                },
+                {
+                    "pid": 2,
+                    "title": "三国演义",
+                    "notice": "台乾清",
+                    "img": "/static/img/timg.jpg"
+                },
+                {
+                    "pid": 3,
+                    "title": "三国演义",
+                    "notice": "台乾清",
+                    "img": "/static/img/timg.jpg"
+                },
+                {
+                    "pid": 1,
+                    "title": "三国演义",
+                    "notice": "台乾清",
+                    "img": "/static/img/timg.jpg"
+                },
+                {
+                    "pid": 2,
+                    "title": "三国演义",
+                    "notice": "台乾清",
+                    "img": "/static/img/timg.jpg"
+                },
+                {
+                    "pid": 3,
+                    "title": "三国演义",
+                    "notice": "台乾清",
+                    "img": "/static/img/timg.jpg"
+                }
+            ]
+        }
+
+    ],
+    "new_book": [{
+            "id": 1,
+            "data": [{
+                    "pid": 1,
+                    "title": "奥特曼11",
+                    "notice": "台乾清",
+                    "img": "/static/img/timg1.jpg"
+                },
+                {
+                    "pid": 2,
+                    "title": "三国演义",
+                    "notice": "台乾清",
+                    "img": "/static/img/timg1.jpg"
+                },
+                {
+                    "pid": 3,
+                    "title": "三国演义",
+                    "notice": "台乾清",
+                    "img": "/static/img/timg1.jpg"
+                },
+                {
+                    "pid": 1,
+                    "title": "三国演义",
+                    "notice": "台乾清",
+                    "img": "/static/img/timg1.jpg"
+                },
+                {
+                    "pid": 2,
+                    "title": "三国演义",
+                    "notice": "台乾清",
+                    "img": "/static/img/timg1.jpg"
+                },
+                {
+                    "pid": 3,
+                    "title": "三国演义",
+                    "notice": "台乾清",
+                    "img": "/static/img/timg1.jpg"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "data": [{
+                    "pid": 1,
+                    "title": "三国演义",
+                    "notice": "台乾清",
+                    "img": "@/assets/img/timg1.jpg"
+                },
+                {
+                    "pid": 2,
+                    "title": "三国演义",
+                    "notice": "台乾清",
+                    "img": "@/assets/img/timg1.jpg"
+                },
+                {
+                    "pid": 3,
+                    "title": "三国演义",
+                    "notice": "台乾清",
+                    "img": "@/assets/img/timg1.jpg"
+                },
+                {
+                    "pid": 1,
+                    "title": "三国演义",
+                    "notice": "台乾清",
+                    "img": "/static/img/timg1.jpg"
+                },
+                {
+                    "pid": 2,
+                    "title": "三国演义",
+                    "notice": "台乾清",
+                    "img": "/static/img/timg1.jpg"
+                },
+                {
+                    "pid": 3,
+                    "title": "三国演义",
+                    "notice": "台乾清",
+                    "img": "/static/img/timg1.jpg"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "data": [{
+                    "pid": 1,
+                    "title": "奥特曼",
+                    "notice": "台乾清",
+                    "img": "@/assets/img/timg1.jpg"
+                },
+                {
+                    "pid": 2,
+                    "title": "奥特曼",
+                    "notice": "台乾清",
+                    "img": "@/assets/img/timg1.jpg"
+                },
+                {
+                    "pid": 3,
+                    "title": "奥特曼",
+                    "notice": "台乾清",
+                    "img": "@/assets/img/timg1.jpg"
+                },
+                {
+                    "pid": 1,
+                    "title": "奥特曼",
+                    "notice": "台乾清",
+                    "img": "@/assets/img/timg.jpg"
+                },
+                {
+                    "pid": 2,
+                    "title": "奥特曼",
+                    "notice": "台乾清",
+                    "img": "@/assets/img/timg.jpg"
+                },
+                {
+                    "pid": 3,
+                    "title": "奥特曼",
+                    "notice": "台乾清",
+                    "img": "@/assets/img/timg.jpg"
+                }
+            ]
         }
     ]
 }

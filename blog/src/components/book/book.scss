@@ -16,8 +16,11 @@
         justify-content: center;
     }
     @include e("title") {
+        display: inline-block;
         font-size: C(26);
-        padding: C(15) C(25);
+        width: C(150);
+        height: C(60);
+        line-height: C(60);
         margin: C(15) 0;
         color: $dark-blue;
         border-radius: C(15);

@@ -1,7 +1,7 @@
 import bookName from '@/components/bookName/bookName.vue'
 export default [
     {
-        path:'/bookName/:id',
+        path:'/:bookname/:id',
         name:'book-name',
         component:bookName,
     }
